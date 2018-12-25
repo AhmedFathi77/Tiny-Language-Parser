@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title>Image Editor</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <script src="js/includer.js"></script>
+		<script src="js/dataflow-init.js"></script>
+		<script src="node_modules/gojs/release/go.js"></script>
+		<script src="js/dataflow-code.js"></script>
+    
+
+  </head>
+  <body>
+    <div id="content">
+      <header>
+        <div class="option" id="close"><i class="fas fa-times"></i></div>
+			  <div class="option" id="maxim"><i class="fas fa-window-maximize"></i></div>
+        <div class="option" id="minim"><i class="far fa-window-minimize"></i></div>
+        <h2 class="header_h2">TINY Compiler</h2>
+      </header>
+      <br><br>
+    </div>
+<div class="container">
+  <div class="row">
+    <div class="form-group col-lg-6">
+       <textarea class="form-control" id="Textarea1" rows="3"></textarea>
+    </div>
+
+    <div class="col-lg-6 result" >
+      <div class="row" style="margin-top:10px;">
+        <div class="form-group col-lg-6" style="margin-left:10px">
+          <div class="list-group" id="tokenvalue">
+              <a href="#" class="list-group-item list-group-item-action active">
+                Token value
+              </a>
+              <div id="insertVal">
+              </div>
+            </div>
+        </div>
+        <div class="form-group col-lg-6" style="margin-left:-20px">
+          <div class="list-group" id="tokentype">
+              <a href="#" class="list-group-item list-group-item-action active">
+                Token Type
+              </a>
+              <div id="inserttyp">
+              </div>
+            </div>
+        </div>
+      </div>
+  </div>
+ </div>
+
+ <div class="row">
+    <button type="button" class="btn btn-outline-dark bton col-lg-2" id="Compile"><i class="fas fa-cloud"></i> Compile</button>
+    <button type="button" class="btn btn-outline-dark bton col-lg-2" id="submitButton"><i class="fas fa-exchange-alt"></i> View Changes</button>
+    <button type="button" class="btn btn-outline-dark bton col-lg-2" id="Reset"><i class="fas fa-power-off"></i> Reset</button>
+ </div>
+
+</div>
+
+    <p id="text"></p>
+
+    <div id="myDiagramDiv" style="border: solid 1px black; width: 100%; height: 800px;background-color:#FFF;"></div>
+    
+    <script src="goDraw.js"></script>
+    <script src="script.js"></script>
+    <script src="parser.js"></script>
+    <script src="nodeParser.js"></script>
+    <script src="js/includer.js"></script>
+	<script src="js/dataflow-init.js"></script>
+	<script src="node_modules/gojs/release/go.js"></script>
+	<!-- Building code -->
+	<script src="js/dataflow-code.js"></script>
+	<script type="text/javascript" src="js/export-arxml.js"></script>
+	<script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="plugins/XMLWriter/XMLWriter.js"></script>
+  <script type="text/javascript" src="js/generate-arxml.js"></script>
+  <script type="text/javascript">
+  	$(document).ready(function(){
+  		includeHTML();
+  		setTimeout(function(){
+  			$('[data-toggle="tooltip"]').tooltip();
+  		}, 250);
+  	});
+	</script>
+	<script type="text/javascript" src="js/Properties.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+  </body>
+</html>
